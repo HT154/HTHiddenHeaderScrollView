@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  HTHiddenHeaderScrollView.h
 //  HTHiddenHeader
 //
 // Copyright (C) 2013 by HT154.
@@ -24,9 +24,20 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface HTHiddenHeaderScrollView : NSScrollView
 
-@property (weak) IBOutlet NSWindow *window;
-@property (assign) IBOutlet NSArrayController *arrayController;
+@property (readonly) BOOL isHeld;
+
+@property (strong) NSView *headerView;
+@property (strong) IBOutlet NSView *headerContentView;
+
+@property (assign) BOOL drawsHeaderBackground;
+
+@property (nonatomic, copy) void (^openBlock)(HTHiddenHeaderScrollView *scrollView);
+@property (nonatomic, copy) void (^closedBlock)(HTHiddenHeaderScrollView *scrollView);
+@property (nonatomic, copy) void (^openedBlock)(HTHiddenHeaderScrollView *scrollView);
+
+- (void)showAndHoldView;
+- (void)releaseView;
 
 @end

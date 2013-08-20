@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  HTHiddenHeaderScrollView.h
 //  HTHiddenHeader
 //
 // Copyright (C) 2013 by HT154.
@@ -22,11 +22,8 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+
 #import <Cocoa/Cocoa.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
-
-@property (weak) IBOutlet NSWindow *window;
-@property (assign) IBOutlet NSArrayController *arrayController;
-
+@interface HTHiddenHeaderClipView : NSClipView
 @end

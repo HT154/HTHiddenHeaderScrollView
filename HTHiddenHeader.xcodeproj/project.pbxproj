@@ -14,21 +14,9 @@
 		03A7749617C3D1F000D87E66 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A7749517C3D1F000D87E66 /* AppDelegate.m */; };
 		03A7749917C3D1F000D87E66 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03A7749717C3D1F000D87E66 /* MainMenu.xib */; };
 		03A7749B17C3D1F000D87E66 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03A7749A17C3D1F000D87E66 /* Images.xcassets */; };
-		03A774A217C3D1F000D87E66 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03A774A117C3D1F000D87E66 /* XCTest.framework */; };
-		03A774A317C3D1F000D87E66 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03A7748217C3D1F000D87E66 /* Cocoa.framework */; };
-		03A774AB17C3D1F000D87E66 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03A774A917C3D1F000D87E66 /* InfoPlist.strings */; };
-		03A774AD17C3D1F000D87E66 /* HTHiddenHeaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A774AC17C3D1F000D87E66 /* HTHiddenHeaderTests.m */; };
+		03A774BA17C3D2BB00D87E66 /* HTHiddenHeaderScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A774B717C3D2BB00D87E66 /* HTHiddenHeaderScrollView.m */; };
+		03A774BB17C3D2BB00D87E66 /* HTHiddenHeaderClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A774B917C3D2BB00D87E66 /* HTHiddenHeaderClipView.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		03A774A417C3D1F000D87E66 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 03A7747717C3D1F000D87E66 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 03A7747E17C3D1F000D87E66;
-			remoteInfo = HTHiddenHeader;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		03A7747F17C3D1F000D87E66 /* HTHiddenHeader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HTHiddenHeader.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,11 +33,14 @@
 		03A7749517C3D1F000D87E66 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		03A7749817C3D1F000D87E66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		03A7749A17C3D1F000D87E66 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		03A774A017C3D1F000D87E66 /* HTHiddenHeaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HTHiddenHeaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03A774A117C3D1F000D87E66 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		03A774A817C3D1F000D87E66 /* HTHiddenHeaderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HTHiddenHeaderTests-Info.plist"; sourceTree = "<group>"; };
 		03A774AA17C3D1F000D87E66 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		03A774AC17C3D1F000D87E66 /* HTHiddenHeaderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTHiddenHeaderTests.m; sourceTree = "<group>"; };
+		03A774B617C3D2BB00D87E66 /* HTHiddenHeaderScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTHiddenHeaderScrollView.h; sourceTree = "<group>"; };
+		03A774B717C3D2BB00D87E66 /* HTHiddenHeaderScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTHiddenHeaderScrollView.m; sourceTree = "<group>"; };
+		03A774B817C3D2BB00D87E66 /* HTHiddenHeaderClipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTHiddenHeaderClipView.h; sourceTree = "<group>"; };
+		03A774B917C3D2BB00D87E66 /* HTHiddenHeaderClipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTHiddenHeaderClipView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,15 +49,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				03A7748317C3D1F000D87E66 /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		03A7749D17C3D1F000D87E66 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				03A774A317C3D1F000D87E66 /* Cocoa.framework in Frameworks */,
-				03A774A217C3D1F000D87E66 /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,7 +69,6 @@
 			isa = PBXGroup;
 			children = (
 				03A7747F17C3D1F000D87E66 /* HTHiddenHeader.app */,
-				03A774A017C3D1F000D87E66 /* HTHiddenHeaderTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,6 +98,7 @@
 			children = (
 				03A7749417C3D1F000D87E66 /* AppDelegate.h */,
 				03A7749517C3D1F000D87E66 /* AppDelegate.m */,
+				03A774BC17C3D2C200D87E66 /* HTHiddenHeader */,
 				03A7749717C3D1F000D87E66 /* MainMenu.xib */,
 				03A7749A17C3D1F000D87E66 /* Images.xcassets */,
 				03A7748917C3D1F000D87E66 /* Supporting Files */,
@@ -154,6 +136,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		03A774BC17C3D2C200D87E66 /* HTHiddenHeader */ = {
+			isa = PBXGroup;
+			children = (
+				03A774B617C3D2BB00D87E66 /* HTHiddenHeaderScrollView.h */,
+				03A774B717C3D2BB00D87E66 /* HTHiddenHeaderScrollView.m */,
+				03A774B817C3D2BB00D87E66 /* HTHiddenHeaderClipView.h */,
+				03A774B917C3D2BB00D87E66 /* HTHiddenHeaderClipView.m */,
+			);
+			name = HTHiddenHeader;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -174,24 +167,6 @@
 			productReference = 03A7747F17C3D1F000D87E66 /* HTHiddenHeader.app */;
 			productType = "com.apple.product-type.application";
 		};
-		03A7749F17C3D1F000D87E66 /* HTHiddenHeaderTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 03A774B317C3D1F000D87E66 /* Build configuration list for PBXNativeTarget "HTHiddenHeaderTests" */;
-			buildPhases = (
-				03A7749C17C3D1F000D87E66 /* Sources */,
-				03A7749D17C3D1F000D87E66 /* Frameworks */,
-				03A7749E17C3D1F000D87E66 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				03A774A517C3D1F000D87E66 /* PBXTargetDependency */,
-			);
-			name = HTHiddenHeaderTests;
-			productName = HTHiddenHeaderTests;
-			productReference = 03A774A017C3D1F000D87E66 /* HTHiddenHeaderTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -200,11 +175,6 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = HT154;
-				TargetAttributes = {
-					03A7749F17C3D1F000D87E66 = {
-						TestTargetID = 03A7747E17C3D1F000D87E66;
-					};
-				};
 			};
 			buildConfigurationList = 03A7747A17C3D1F000D87E66 /* Build configuration list for PBXProject "HTHiddenHeader" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -220,7 +190,6 @@
 			projectRoot = "";
 			targets = (
 				03A7747E17C3D1F000D87E66 /* HTHiddenHeader */,
-				03A7749F17C3D1F000D87E66 /* HTHiddenHeaderTests */,
 			);
 		};
 /* End PBXProject section */
@@ -237,14 +206,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		03A7749E17C3D1F000D87E66 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				03A774AB17C3D1F000D87E66 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -252,28 +213,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03A774BA17C3D2BB00D87E66 /* HTHiddenHeaderScrollView.m in Sources */,
 				03A7749617C3D1F000D87E66 /* AppDelegate.m in Sources */,
 				03A7748F17C3D1F000D87E66 /* main.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		03A7749C17C3D1F000D87E66 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				03A774AD17C3D1F000D87E66 /* HTHiddenHeaderTests.m in Sources */,
+				03A774BB17C3D2BB00D87E66 /* HTHiddenHeaderClipView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		03A774A517C3D1F000D87E66 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 03A7747E17C3D1F000D87E66 /* HTHiddenHeader */;
-			targetProxy = 03A774A417C3D1F000D87E66 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		03A7748B17C3D1F000D87E66 /* InfoPlist.strings */ = {
@@ -407,46 +354,6 @@
 			};
 			name = Release;
 		};
-		03A774B417C3D1F000D87E66 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HTHiddenHeader.app/Contents/MacOS/HTHiddenHeader";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "HTHiddenHeader/HTHiddenHeader-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "HTHiddenHeaderTests/HTHiddenHeaderTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		03A774B517C3D1F000D87E66 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HTHiddenHeader.app/Contents/MacOS/HTHiddenHeader";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "HTHiddenHeader/HTHiddenHeader-Prefix.pch";
-				INFOPLIST_FILE = "HTHiddenHeaderTests/HTHiddenHeaderTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -464,14 +371,6 @@
 			buildConfigurations = (
 				03A774B117C3D1F000D87E66 /* Debug */,
 				03A774B217C3D1F000D87E66 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		03A774B317C3D1F000D87E66 /* Build configuration list for PBXNativeTarget "HTHiddenHeaderTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				03A774B417C3D1F000D87E66 /* Debug */,
-				03A774B517C3D1F000D87E66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
