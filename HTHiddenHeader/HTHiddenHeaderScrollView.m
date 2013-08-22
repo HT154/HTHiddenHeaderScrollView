@@ -32,10 +32,9 @@
 @implementation HTHeaderViewTableViewRowColorView
 
 -(void)drawRect:(NSRect)dirtyRect{
-	if(((HTHiddenHeaderScrollView *)self.superview.superview).drawsHeaderBackground){
-		[[NSColor whiteColor] set];
-		NSBezierPath *rectPath = [NSBezierPath bezierPathWithRect:self.bounds];
-		[rectPath fill];
+	[super drawRect:dirtyRect];
+	if(((HTHiddenHeaderScrollView *)self.superview.superview).backgroundDrawingBlock){
+		((HTHiddenHeaderScrollView *)self.superview.superview).backgroundDrawingBlock((HTHiddenHeaderScrollView *)self.superview.superview, self.bounds);
 	}
 }
 
@@ -97,6 +96,7 @@
 		self.headerView.autoresizingMask = NSViewWidthSizable;
 		
 		self.headerContentView.frame = NSMakeRect(0, 0, contentRect.size.width,  self.headerContentView.frame.size.height);
+		self.headerContentView.autoresizingMask = NSViewWidthSizable;
 		[self.headerView addSubview:self.headerContentView];
 		
 		[self.headerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(0)-[headerContentView]-(0)-|" options:(NSLayoutFormatDirectionLeadingToTrailing | NSLayoutFormatAlignAllLeading) metrics:@{@"0": @0} views:@{@"|": self.headerView, @"headerContentView": self.headerContentView}]];
@@ -121,7 +121,13 @@
 		if([self overRefreshView] && !self.isHeld){
 			[self showAndHoldView];
 		}else if(![self overRefreshView] && self.isHeld){
-			[self naturallyReleaseView];
+			if (self.shouldPerformCloseOnScrollBlock) {
+				if(self.shouldPerformCloseOnScrollBlock(self)){
+					[self naturallyReleaseView];
+				}
+			}else{
+				[self naturallyReleaseView];
+			}
 		}
 	}
 	
@@ -138,8 +144,8 @@
 			self.openBlock(self);
 		}
 	}else{
-		if(self.closedBlock){
-			self.closedBlock(self);
+		if(self.closeBlock){
+			self.closeBlock(self);
 		}
 	}
 	
@@ -160,9 +166,9 @@
 }
 
 - (void)showAndHoldView{
-	[self willChangeValueForKey:@"isRefreshing"];
+	[self willChangeValueForKey:@"isHeld"];
 	_isHeld = YES;
-	[self didChangeValueForKey:@"isRefreshing"];
+	[self didChangeValueForKey:@"isHeld"];
 	
 	if(self.openedBlock){
 		self.openedBlock(self);
@@ -170,9 +176,13 @@
 }
 
 - (void)naturallyReleaseView{
-	[self willChangeValueForKey:@"isRefreshing"];
+	if(self.closedBlock){
+		self.closedBlock(self);
+	}
+	
+	[self willChangeValueForKey:@"isHeld"];
 	_isHeld = NO;
-	[self didChangeValueForKey:@"isRefreshing"];
+	[self didChangeValueForKey:@"isHeld"];
 }
 
 - (void)releaseView{

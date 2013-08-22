@@ -31,11 +31,12 @@
 @property (strong) NSView *headerView;
 @property (strong) IBOutlet NSView *headerContentView;
 
-@property (assign) BOOL drawsHeaderBackground;
-
 @property (nonatomic, copy) void (^openBlock)(HTHiddenHeaderScrollView *scrollView);
+@property (nonatomic, copy) void (^closeBlock)(HTHiddenHeaderScrollView *scrollView);
 @property (nonatomic, copy) void (^closedBlock)(HTHiddenHeaderScrollView *scrollView);
 @property (nonatomic, copy) void (^openedBlock)(HTHiddenHeaderScrollView *scrollView);
+@property (nonatomic, copy) BOOL (^shouldPerformCloseOnScrollBlock)(HTHiddenHeaderScrollView *scrollView);
+@property (nonatomic, copy) void (^backgroundDrawingBlock)(HTHiddenHeaderScrollView *scrollView, NSRect rect);
 
 - (void)showAndHoldView;
 - (void)releaseView;
